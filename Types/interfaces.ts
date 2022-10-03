@@ -36,3 +36,59 @@ const shoes: Product = {
 }
 
 console.log(shoes.applyDiscount(0.4))
+
+interface Dog {
+    name: string
+    age: number
+}
+
+interface Dog {
+    breed: string
+    bark(): string
+}
+
+const Tuttu: Dog = {
+    name: "Tuttu",
+    age: 88,
+    breed: "ParangPrachaRat",
+    bark() {
+        return "Ku Mai Ook"
+    },
+}
+
+interface ServiceDog extends Dog {
+    job: "drug sniffer" | "bomb" | "coup"
+}
+
+const Sonthiya: ServiceDog = {
+    name: "Sonthiya",
+    age: 77,
+    breed: "Pasom",
+    bark() {
+        return "Loong Too Kon Dee!"
+    },
+    job: "drug sniffer"
+}
+
+interface Human {
+    name: string
+}
+
+interface Employee {
+    readonly id: number,
+    email: string
+}
+
+interface Engineer extends Human, Employee {
+    level: string,
+    languages: string[]
+}
+
+const tony: Engineer = {
+    name: "Taksin",
+    id: 448,
+    email: "tonytonywoodsome@dubai.com",
+    level: "senior",
+    languages: ["ENG","TH"]
+}
+console.log(tony)
