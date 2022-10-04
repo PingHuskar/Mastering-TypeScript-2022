@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Greeter from './components/Greeter';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <Greeter />
+      <Greeter />
+      <Greeter />
     </div>
   );
 }
